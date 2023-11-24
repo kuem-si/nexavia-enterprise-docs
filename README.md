@@ -21,11 +21,11 @@ Base theme: https://starlight.astro.build/
 - Upgrading process of base theme is manual. There is folder named **_ThemeUpgrade** with subfolders *Current* and *New*.
 - Generated base theme version which is currently in use should always be present in *Current* folder **without any modifications**.
 
-Install dependencies = **Yes**
+  Install dependencies = **Yes**
 
-Typescript = **Yes (Strict)**
+  Typescript = **Yes (Strict)**
 
-Init new git repo = **No**
+  Init new git repo = **No**
   
 - Newer version of base theme should be generated in *New* folder with command which is written under section **Project generation command**.
 - Compare content of *Current* and *New* folders with tool like WinMerge: https://winmerge.org/
