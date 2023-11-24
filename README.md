@@ -1,6 +1,7 @@
 # Documentation for Nexavia Enterprise
 
 Technology: https://astro.build/
+
 Base theme: https://starlight.astro.build/
 
 ## Prerequisites
