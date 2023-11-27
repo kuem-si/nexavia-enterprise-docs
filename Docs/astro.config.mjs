@@ -5,7 +5,7 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'Documentation for Nexavia Enterprise',
+			title: 'Docs for Nexavia Enterprise',
 			social: {
 				github: 'https://github.com/withastro/starlight',
 			},
