@@ -10,7 +10,7 @@ export default defineConfig({
 				github: 'https://github.com/kuem-si',
 			},
 			sidebar: [
-				{
+				/*{
 					label: 'Guides',
 					items: [
 						// Each item here is one entry in the navigation menu.
@@ -20,6 +20,19 @@ export default defineConfig({
 				{
 					label: 'Reference',
 					autogenerate: { directory: 'reference' },
+				},*/
+				{
+					label: 'User',
+					items: [
+						{ label: 'Login', link: '/user/login' },
+						{ label: 'Supported IoT Devices', link: '/user/supported_iot_devices' }
+					]
+				},
+				{
+					label: 'Developer',
+					items: [
+						{ label: 'Authentication', link: '/developer/login' }
+					]
 				},
 			],
 		}),

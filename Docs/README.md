@@ -24,3 +24,11 @@ Base theme: https://starlight.astro.build/
 - Compare content of *Current* and *New* folders with tool like WinMerge: https://winmerge.org/
 - Make all changes in actual project.
 - Copy content from *New* folder to *Current* folder and delete content inside *New* folder
+
+## IMPORTANT
+There should be filename named ``CNAME`` (no file extension!) inside ``public`` folder with correct URL name of deployed application (e.g.: docs.enterprise.nexavia.io).
+
+## Writing documentation
+- Update menu in file astro.config.mjs
+- Create subfolders inside ``src\content\docs`` with ``.md`` files
+- Look Markdown syntax and Starlight examples
