@@ -25,7 +25,7 @@ Base theme: https://starlight.astro.build/
 - Make all changes in actual project.
 - Copy content from *New* folder to *Current* folder and delete content inside *New* folder
 
-## IMPORTANT!
+## !IMPORTANT!
 There should be filename named ``CNAME`` (no file extension!) inside ``public`` folder with correct URL name of deployed application (e.g.: docs.enterprise.nexavia.io).
 
 ## Writing documentation
