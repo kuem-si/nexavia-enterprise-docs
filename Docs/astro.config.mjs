@@ -7,7 +7,7 @@ export default defineConfig({
 		starlight({
 			title: 'Docs for Nexavia Enterprise',
 			social: {
-				github: 'https://github.com/withastro/starlight',
+				github: 'https://github.com/kuem-si',
 			},
 			sidebar: [
 				{
