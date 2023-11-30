@@ -31,7 +31,7 @@ export default defineConfig({
 				{
 					label: 'Developer',
 					items: [
-						{ label: 'Authentication', link: '/developer/login' }
+						{ label: 'Authentication', link: '/developer/authentication' }
 					]
 				},
 			],
