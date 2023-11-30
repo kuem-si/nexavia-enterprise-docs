@@ -22,6 +22,10 @@ export default defineConfig({
 					autogenerate: { directory: 'reference' },
 				},*/
 				{
+					label: 'Overview',
+					link: '/overview'
+				},
+				{
 					label: 'User',
 					items: [
 						{ label: 'Login', link: '/user/login' },
