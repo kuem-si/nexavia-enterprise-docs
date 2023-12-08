@@ -28,13 +28,33 @@ export default defineConfig({
 				{
 					label: 'User',
 					items: [
-						{ label: 'Login', link: '/user/login' },
-						{ label: 'Supported IoT Devices', link: '/user/supported_iot_devices' }
+						{ label: 'Overview', link: '/user/overview' },
+						{
+							label: 'Tenant Management',
+							items: [
+								{ label: 'Overview', link: '/user/tenant-management' },
+							]
+						},
+						{
+							label: 'Authentication & Login',
+							items: [
+								{ label: 'Overview', link: '/user/authentication-and-login' },
+							]
+						},
+						{
+							label: 'Device Management',
+							items: [
+								{ label: 'Supported Network Technologies', link: '/user/device-management/supported-network-technologies-and-concentrators' },
+								{ label: 'Supported IoT Devices', link: '/user/device-management/supported-iot-devices' },
+								{ label: 'IoT Device pairing with application', link: '/user/device-management/device-pairing' }
+							]
+						}
 					]
 				},
 				{
 					label: 'Developer',
 					items: [
+						{ label: 'Overview', link: '/developer/overview' },
 						{ label: 'Authentication', link: '/developer/authentication' }
 					]
 				},
