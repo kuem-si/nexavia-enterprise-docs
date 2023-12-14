@@ -14,12 +14,16 @@ Base theme: https://starlight.astro.build/
 - Install current Starlight template (in the current folder): ``npm create astro@latest -- --template starlight``
 
 ## Run development
-- Install dependencies: ``npm install``
+- Go inside ``/Docs`` folder in terminal
+- Install dependencies (run always after fetching from git and/or running the solution): ``npm install``
 - Run solution: ``npm run dev``
 
 ## Upgrading based theme (template)
 - Upgrading process of base theme is manual. There is folder named **_ThemeUpgrade** with subfolders *Current* and *New*.
-- Generated base theme version which is currently in use should always be present in *Current* folder **without any modifications**.  
+- Before generating new version update
+  - Nodejs
+  - npm: ``npm install -g npm@latest``
+- Generated base theme version which is currently in use should always be present in *Current* folder **without any modifications**.
 - Newer version of base theme should be generated in *New* folder with command which is written under section **Project generation command**.
 
   Install dependencies = **Yes**
