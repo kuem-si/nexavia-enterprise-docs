@@ -15,7 +15,7 @@ Base theme: https://starlight.astro.build/
 
 ## Run development
 - Go inside ``/Docs`` folder in terminal
-- Install dependencies (run always after fetching from git and/or running the solution): ``npm install``
+- Install dependencies (**run always after fetching from git and/or running the solution**): ``npm install``
 - Run solution: ``npm run dev``
 
 ## Upgrading based theme (template)
@@ -35,3 +35,13 @@ Base theme: https://starlight.astro.build/
 - Compare content of *Current* and *New* folders with tool like WinMerge: https://winmerge.org/
 - Make all changes in actual project.
 - Copy content from *New* folder to *Current* folder and delete content inside *New* folder
+
+-----
+
+- When upgrading, always:
+
+  - delete ``node_modules`` folder (inside ``/Docs`` folder)
+  - replace ``package-lock.json`` file with new one (inside ``/Docs`` folder)
+  - compare ``package.json`` (inside ``/Docs`` folder) with new one. **Change also ``name`` attribute with new one.**
+  - run ``npm install`` (inside ``/Docs`` folder)
+  - run ``npm run dev`` (inside ``/Docs`` folder) and check if everything is ok
