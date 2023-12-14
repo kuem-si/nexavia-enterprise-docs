@@ -3,6 +3,115 @@ title: IoT Device pairing with application
 description: Overview of concepts and best practices for pairing IoT devices with application
 ---
 
-Overview of concepts and best practices for pairing IoT devices with application
 
-TODO
+Overview of concepts and best practices for pairing IoT devices with application.
+
+Every **Device Type** that has decoder gets default base for code which follows convention
+
+```
+[device_manufacturer_company]-[device-model-name-and-potential-version]-[firmware-version]
+```
+Example of default base code for [Senzemo Senspuck SPU10B](/user/device-management/supported-iot-devices#senspuck-spu10b)
+```
+sensedge-senspuck-spu10b-v001
+```
+<hr />
+
+## Naming convention schemas recommendations
+**It's highly recommended that you define strict and well-described naming conventions for your different
+device types which are in use inside your tenant!**
+
+Well-defined naming convention saves a lot of time when establishing IoT sensor ecosystem for your tenant and prevents
+debugging why there is no decoded data for specific device in application.
+
+Few examples of good naming convention schemas for **specific device**:
+```
+[device_manufacturer_company]-[device-model-name-and-potential-version]-[sequence-number]
+[device_manufacturer_company]-[device-model-name-and-potential-version]-[serial-number]
+```
+
+:::tip
+It's recommended that **firmware version** is not part of naming convention scheme for production installed device.<br />
+When device is flashed with new major firmware version, <u>device name remains the same</u>.<br />
+It's also a misleading name if there is a different firmware version in a specific device name as it is.
+:::
+
+:::tip
+It's highly recommended that there are no UNDERSCORE characters (_) inside specific device name!
+
+**Instead of underscore, use hyphen/dash (-) or *at* sign (@) (preferred hyphen/dash).**<br />
+**Avoid also space characters in favor of hyphen/dash.**
+
+Some network concentrators do not even allow underscore characters (like The Things Stack).
+
+Some reverse proxies (like nginx) recogize underscore as special characters.
+https://nginx.org/en/docs/http/ngx_http_core_module.html#ignore_invalid_headers
+https://nginx.org/en/docs/http/ngx_http_core_module.html#underscores_in_headers
+:::
+
+:::tip
+Don't mix uppercase and lowercase letters.<br />
+Decide for lowercase or uppercase and stick with that for the whole defined naming convention.
+:::
+
+:::caution
+Application does not allow inserting specific custom-defined pairing code base if this character string is already sub-string
+inside other pairing code base string (on this or any other Device Type).
+:::
+
+## Automatic device recognition
+**If devices are named by conventions, automatic device recognition is possible.**
+
+It is recommended that sequence or device serial number is appended to the end of specific device name that automatic device recognition works.
+
+Example for specific device name for device type **Senzemo Senspuck SPU10B** based on default code:
+```
+sensedge-senspuck-spu10b-v001-0000025
+```
+Instead of sequence number, you can use serial number or something different that is unique.
+Example:
+```
+sensedge-senspuck-spu10b-v001-[serial-number]
+or
+sensedge-senspuck-spu10b-v001-[custom-unique-word]
+```
+<hr />
+Decoding processing logic in the application recognizes device type *sensedge-senspuck-spu10b-v001* without any doubts and therefore also payload decoding logic.
+
+:::caution
+## Device unique name inside tenant
+For specific device name (like **sensedge-senspuck-spu10b-v001-0000025**) is not guaranteed that is 100% unique in application!
+
+Specific devices are uniquely determined by **Network Concentrator instance id/name** and **specific device name**.
+
+Reasons for such design decision: It is not possible to prevent that one specific device (with specific name) is connected to multiple network
+concentrators (more specific instances of network concentrators) and configured that all network concentrators with this specific device forward data to
+the same tenant in the application.
+:::
+
+:::caution
+## Major device type firmware updates
+Sometimes specific **device type** receives major firmware update, which changes the payload structure.<br />
+Therefore, some device types have multiple versions, which are defined on [Supported IoT Devices](/user/device-management/supported-iot-devices) page
+with different default pairing code base.
+
+**Specific Device Type with a major firmware update
+(with a different payload structure compared to the previous firmware version) is treated as a new Device Type.**
+:::
+
+<hr />
+
+## Applying additional pairing code base for Device Type
+
+**It is possible to assign one or more different pairing code bases for specific Device Type.**
+
+:::tip
+It's recommended that for the **production environment** (when IoT devices are installed on real locations) custom naming scheme
+is defined <u>without firmware version</u> data and applied on relevant Device Types
+<u>before first IoT devices send data</u>.
+:::
+
+When assigning a new pairing code base for device type consider:
+- Read and follow [Naming convention schemas recommendations](#naming-convention-schemas-recommendations)
+- **Define only one naming convention scheme if possible**
+- **Be consistent with the naming scheme!**
