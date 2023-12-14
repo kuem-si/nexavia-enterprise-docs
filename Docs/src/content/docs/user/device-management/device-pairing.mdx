@@ -115,3 +115,27 @@ When assigning a new pairing code base for device type consider:
 - Read and follow [Naming convention schemas recommendations](#naming-convention-schemas-recommendations)
 - **Define only one naming convention scheme if possible**
 - **Be consistent with the naming scheme!**
+
+<hr />
+
+## Updating major firmware version in production environment
+When updating firmware (major version) of installed IoT devices (based on specific Device Type),
+**it is MANUAL JOB to change Device Type on specific devices to different device type**.
+
+:::caution
+Updating all devices with new (major) firmware version take some time.<br />
+Therefore, changing device type on specific device manually is mendatory operation when specific device is updated with new firmware verison.
+
+**The only case, when automatic update of device type on specific device is executed when device type of specific device is <u>unknown</u>.
+When such device receives message in application and device type can be determined - <u>it is assigned and never automatically changed</u>.**
+:::
+
+Correst order of steps when updating firmware for specific device type:
+
+1) If there are custom pairing code bases on old device type, delete them and create identical ones on new device type.
+2) Based on firmware updating status of specific devices, update device type manually in application for these specific devices.
+
+:::danger
+During firmware update process (time range), some received messages (payloads) may not be decoded properly due to mismatch of payload message and defined
+device type on specific device in application.
+:::
