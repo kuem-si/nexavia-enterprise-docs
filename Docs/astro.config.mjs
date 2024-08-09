@@ -18,7 +18,7 @@ export default defineConfig({
 					label: 'Guides',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', link: '/guides/example/' },
+						{ label: 'Example Guide', slug: 'guides/example' },
 					],
 				},
 				{
@@ -27,30 +27,30 @@ export default defineConfig({
 				},*/
 				{
 					label: 'Overview',
-					link: '/overview'
+					slug: 'overview'
 				},
 				{
 					label: 'User',
 					items: [
-						{ label: 'Overview', link: '/user/overview' },
+						{ label: 'Overview', slug: 'user/overview' },
 						{
 							label: 'Tenant Management',
 							items: [
-								{ label: 'Overview', link: '/user/tenant-management' },
+								{ label: 'Overview', slug: 'user/tenant-management' },
 							]
 						},
 						{
 							label: 'Authentication & Login',
 							items: [
-								{ label: 'Overview', link: '/user/authentication-and-login' },
+								{ label: 'Overview', slug: 'user/authentication-and-login' },
 							]
 						},
 						{
 							label: 'Device Management',
 							items: [
-								{ label: 'Supported Network Technologies', link: '/user/device-management/supported-network-technologies-and-concentrators' },
-								{ label: 'Supported IoT Devices', link: '/user/device-management/supported-iot-devices' },
-								{ label: 'IoT Device pairing with application', link: '/user/device-management/device-pairing' }
+								{ label: 'Supported Network Technologies', slug: 'user/device-management/supported-network-technologies-and-concentrators' },
+								{ label: 'Supported IoT Devices', slug: 'user/device-management/supported-iot-devices' },
+								{ label: 'IoT Device pairing with application', slug: 'user/device-management/device-pairing' }
 							]
 						}
 					]
@@ -58,8 +58,8 @@ export default defineConfig({
 				{
 					label: 'Developer',
 					items: [
-						{ label: 'Overview', link: '/developer/overview' },
-						{ label: 'Authentication', link: '/developer/authentication' }
+						{ label: 'Overview', slug: 'developer/overview' },
+						{ label: 'Authentication', slug: 'developer/authentication' }
 					]
 				},
 			],
