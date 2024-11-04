@@ -1,0 +1,68 @@
+---
+title: Device Dashboard
+description: Device Dashboard
+---
+
+import { Card, CardGrid, LinkCard, Tabs, TabItem, Icon } from '@astrojs/starlight/components';
+
+<img src={deviceDashboard.src} alt="device-dashboard" />
+
+## The page consists of three different sections:
+
+### Widgets
+
+The widgets can be configured on the [Device Settings](/user/device-management/device-settings) page.
+
+Each measurement can be turned on or off and maximum and minimum values can be defined.
+
+<img src={deviceWidgets.src} alt="device-widgets" />
+
+### Chart
+
+The chart draw historic trends for each measurement type the device reports.
+
+<img src={deviceChart.src} alt="device-chart" />
+
+Each type can be toggled by clicking the legend on the right side of the chart.
+
+<img src={chartToggle.src} alt="chart-toggle" />
+
+The chart can be exported in different formats, by clicking the hamburger menu item
+
+<img src={chartExport.src} alt="chart-export" />
+
+There are also different types of charts available, by clicking the selection box below the chart.
+
+<img src={chartTypes.src} alt="chart-types" />
+
+### Grid
+
+The grid displays the device historical data.
+
+<img src={deviceDataGrid.src} alt="device-data-grid" />
+
+You can adjust the columns you want to see, by clicking the square icon on the right upper side of the grid
+
+<img src={deviceDataGridColumnChooser.src} alt="device-data-grid-column-chooser" />
+
+There are also different export options available, by clicking the appropriate export button.
+
+<img src={deviceDataGridExport.src} alt="device-data-grid-export" />
+
+## Date range
+
+By selecting the date range with the two inputs, you can choose a larger dataset to be displayed on the chart and grid.
+
+<img src={dateRangeSelector.src} alt="date-range-selector" />
+
+
+import deviceDashboard from '../../../../assets/pictures/device-dashboard.png';
+import deviceWidgets from '../../../../assets/pictures/device-widgets.png';
+import deviceChart from '../../../../assets/pictures/device-chart.png';
+import deviceDataGrid from '../../../../assets/pictures/device-data-grid.png';
+import chartToggle from '../../../../assets/pictures/chart-toggle.png';
+import chartExport from '../../../../assets/pictures/chart-export.png';
+import chartTypes from '../../../../assets/pictures/chart-types.png';
+import deviceDataGridColumnChooser from '../../../../assets/pictures/device-data-grid-column-chooser.png';
+import deviceDataGridExport from '../../../../assets/pictures/device-data-grid-export.png';
+import dateRangeSelector from '../../../../assets/pictures/date-range-selector.png';

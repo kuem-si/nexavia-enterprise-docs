@@ -5,7 +5,7 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'Docs for Nexavia Enterprise',
+			title: 'Docs for Nexavia and Thynkr',
 			customCss: [
 				// Relative path to your custom CSS file
 				'./src/styles/custom.css',
@@ -34,15 +34,22 @@ export default defineConfig({
 					items: [
 						{ label: 'Overview', slug: 'user/overview' },
 						{
-							label: 'Tenant Management',
+							label: 'Authentication & Login',
 							items: [
-								{ label: 'Overview', slug: 'user/tenant-management' },
+								{ label: 'Login', slug: 'user/authentication-and-login' },
 							]
 						},
 						{
-							label: 'Authentication & Login',
+							label: 'Dashboard',
+							items :[
+								{ label: 'Main Dashboard', slug: 'user/dashboard/main' },
+								{ label: 'Device Dashboard', slug: 'user/dashboard/device' },
+							]
+						},
+						{
+							label: 'Tenant Management',
 							items: [
-								{ label: 'Overview', slug: 'user/authentication-and-login' },
+								{ label: 'Overview', slug: 'user/tenant-management' },
 							]
 						},
 						{
@@ -50,7 +57,8 @@ export default defineConfig({
 							items: [
 								{ label: 'Supported Network Technologies', slug: 'user/device-management/supported-network-technologies-and-concentrators' },
 								{ label: 'Supported IoT Devices', slug: 'user/device-management/supported-iot-devices' },
-								{ label: 'IoT Device pairing with application', slug: 'user/device-management/device-pairing' }
+								{ label: 'IoT Device pairing with application', slug: 'user/device-management/device-pairing' },
+								{ label: 'Device Settings', slug: 'user/device-management/device-settings' }
 							]
 						}
 					]
