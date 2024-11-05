@@ -67,7 +67,8 @@ export default defineConfig({
 					label: 'Developer',
 					items: [
 						{ label: 'Overview', slug: 'developer/overview' },
-						{ label: 'Authentication', slug: 'developer/authentication' }
+						{ label: 'Authentication', slug: 'developer/authentication' },
+						{ label: 'Device List', slug: 'developer/device-list' }
 					]
 				},
 			],

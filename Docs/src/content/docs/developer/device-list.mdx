@@ -1,0 +1,207 @@
+---
+title: Device List
+description: Device List API
+---
+
+## Device List
+
+To retrieve a list of the devices on the application send a request to:
+```
+GET /api/iot-device-management/get-device-list?__tenant=<your-tenant-id>
+```
+
+with the following headers:
+```
+Authorization: Bearer <your-auth-token>
+__tenant: <your-tenant-id>
+```
+
+The application will return the device list in the following format:
+```
+[
+    {
+        "id": 1,
+        "uuid": "fb09c786-a26a-4368-be58-0a8b812aaccc",
+        "organizationUnitId": "00000000-0000-0000-0000-000000000000",
+        "creationTime": "2024-01-01T00:00:00.000000",
+        "lastModificationTime": "2024-01-01T00:00:00.000000",
+        "deviceTypeEnumId": 1,
+        "uniqueIdentifier": "device-001",
+        "uniqueIdentifierNormalizedUpperCase": "DEVICE-001",
+        "concentratorInstanceId": 1,
+        "concentratorInstanceUuid": "f5fbd7cb-8dae-43d0-8ee0-edce77ea3f28",
+        "serialNumber": "A81758FFFE03A2B7",
+        "serialNumberNormalizedUpperCase": "A81758FFFE03A2B7",
+        "sequenceNumber": 1,
+        "active": true,
+        "gpsLat": 00.0000000,
+        "gpsLon": 00.0000000,
+        "altitude": null,
+        "altitudeMeasurementUnitEnumId": null,
+        "friendlyDisplayAlias": "device-001",
+        "description": null,
+        "manufactureTimestampUtc": "2024-01-01T00:00:00.000000Z",
+        "deviceTypePayloadTypeParameterTypeCommonEnumList": [],
+        "deviceTypePayloadTypeParameterTypeCommonEnumIdList": [],
+        "deviceTypePayloadTypeParameterTypeCommonEnumIdDownlinkList": [],
+        "maxInactivityDurationPeriodFromLastMessageMilliseconds": 86400000,
+        "enableOfflineAlarmSms": false,
+        "enableOfflineAlarmEmail": false,
+        "emailOfflineAlarmListAsCommaSeparatedValue": "",
+        "smsOfflineAlarmListAsCommaSeparatedValue": "",
+        "lastMessageReceivedTimestampUtc": "2024-01-01T00:00:00.000000Z",
+        "isOffline": false,
+        "nextMessageDueTimestampUtc": "2024-01-02T00:00:00.000000Z"
+    }
+]
+```
+
+## Device Last Data
+
+To retrieve a list of last data sent by the device send a request to:
+```
+GET /api/iot-device-decoded-data-acceptor/get-last-data-for-deviceid?deviceId=<device-id>&__tenant=<your-tenant-id>
+```
+
+with the following headers:
+```
+Authorization: Bearer <your-auth-token>
+__tenant: <your-tenant-id>
+```
+
+The application will return the device list in the following format:
+```
+[
+    {
+        "id": 1,
+        "deviceId": 1,
+        "deviceUuid": "fb09c786-a26a-4368-be58-0a8b812aaccc",
+        "deviceTypeEnumId": 1,
+        "deviceTypeUuid": "68785923-b531-4d04-98c1-18a2f6481884",
+        "concentratorInstanceId": 1,
+        "concentratorInstanceUuid": "68785923-b531-4d04-98c1-18a2f6481884",
+        "acceptedMessageId": 1,
+        "acceptedMessageUuid": "293ed742-5755-4975-b0a1-b2f42af66135",
+        "deviceDataImporterProcessingStatusId": 0,
+        "deviceDataImporterProcessingStatusUuid": "00000000-0000-0000-0000-000000000000",
+        "deviceTypePayloadTypeParameterTypeCommonEnumId": 101,
+        "deviceTypePayloadTypeParameterTypeCommonEnumIdName": "Temperature1",
+        "deviceTypePayloadTypeEnumId": 1,
+        "parameterValueOriginalString": "14.12",
+        "roundedParameterValueOriginalString": "14.12",
+        "parameterValueOriginalLong": null,
+        "parameterValueOriginalDecimal": 14.12,
+        "parameterValueOriginalBool": null,
+        "measurementUnitOriginalEnumId": 1,
+        "measurementUnitOriginalEnumIdFullName": "DegreesCelsius",
+        "measurementUnitOriginalEnumIdAbbreviation": "°C",
+        "parameterValueCalculatedString": "14.12",
+        "roundedParameterValueCalculatedString": "14.12",
+        "parameterValueCalculatedLong": null,
+        "parameterValueCalculatedDecimal": 14.12,
+        "parameterValueCalculatedBool": null,
+        "measurementUnitCalculatedEnumId": 1,
+        "measurementUnitCalculatedEnumIdFullName": "DegreesCelsius",
+        "measurementUnitCalculatedEnumIdAbbreviation": "°C",
+        "parameterValueValidString": "14.12",
+        "roundedParameterValueValidString": "14.12",
+        "parameterValueValidLong": null,
+        "parameterValueValidDecimal": 14.12,
+        "parameterValueValidBool": null,
+        "measurementUnitValidEnumId": 1,
+        "measurementUnitValidEnumIdFullName": "DegreesCelsius",
+        "measurementUnitValidEnumIdAbbreviation": "°C",
+        "friendlyDisplayAlias": "Temperature1",
+        "show": true,
+        "minimumAllowedValue": null,
+        "maximumAllowedValue": null,
+        "minimumTheoreticalValue": null,
+        "maximumTheoreticalValue": null,
+        "allowedBooleanValues": null,
+        "allowedNumericalValues": null,
+        "allowedTextValues": null,
+        "defaultFontawesomeIconCode": "fa-thermometer",
+        "deviceTypePayloadTypeParameterTypeCommonEnumIdOrderNumber": 1,
+        "messageTimestamp": "2024-01-01T00:00:00.000000",
+        "messageTimestampUtc": "2024-01-01T00:00:00.000000Z"
+    },
+]
+```
+
+## Device History
+
+To retrieve a list of last data sent by the device send a request to:
+```
+GET /api/iot-device-status-dwh-acceptor/get-history-status-dwh-data-list-for-device-in-timeframe-for-devextreme
+?deviceUuid=<device-uuid>
+&dxLoadOptions={}
+&fromDateStringRepresentation=2024-01-01T12:00:00
+&toDateStringRepresentation=2024-01-02T12:00:00
+&__tenant=<your-tenant-id>
+```
+
+:::caution
+Please be considerate to use timeframes within a 30-day period. Abusing the API could result in a temporary rate-limit from the server!
+:::
+
+:::tip
+The dxLoadOptions variable can be used to filter and paginate the data on the server side.
+https://js.devexpress.com/jQuery/Documentation/ApiReference/Data_Layer/CustomStore/LoadOptions/
+:::
+
+```
+{
+    "data": 
+    [
+        {
+            "tenantId": "889befff-477f-4c19-8fc5-fa5ea115f956",
+            "uuid": "851bb0fc-7881-46ec-a9a5-0179ada4dcf2",
+            "acceptedMessageId": 1,
+            "acceptedMessageUuid": "35c3ab2b-0ec6-419b-9bb2-42f2cf9654d8",
+            "deviceDataImporterProcessingStatusId": 1,
+            "deviceDataImporterProcessingStatusUuid": "35c3ab2b-0ec6-419b-9bb2-42f2cf9654d8",
+            "deviceId": 1,
+            "deviceUuid": "251ed8ec-1728-4a51-8148-06ae6b9d082f",
+            "deviceTypeEnumId": 1,
+            "deviceTypeUuid": "251ed8ec-1728-4a51-8148-06ae6b9d082f",
+            "messageTimestamp": "2024-01-01T00:00:00.000000",
+            "messageTimestampUtc": "2024-01-01T00:00:00.000000Z",
+            "concentratorInstanceId": 1,
+            "concentratorInstanceUuid": "c8d27bad-d17e-464b-9a4c-8aca0d040518",
+            "concentratorInstanceCode": "ttn",
+            "concentratorInstanceDisplayName": "ttn",
+            "deviceTypePayloadTypeParameterTypeCommonEnumIds": [
+                131
+            ],
+            "deviceTypePayloadTypeParameterTypeCommonEnumIdsAsCommaSeparatedString": "[131]",
+            "statusParameterCommonList": [
+                {
+                    "deviceTypePayloadTypeParameterTypeCommonEnumId": 131,
+                    "measurementReadingTypeEnumId": null,
+                    "parameterValueOriginalString": "12.31",
+                    "parameterValueOriginalLong": null,
+                    "parameterValueOriginalDecimal": 12.31,
+                    "parameterValueOriginalBool": null,
+                    "measurementUnitOriginalEnumId": 1,
+                    "parameterValueCalculatedString": "12.31",
+                    "parameterValueCalculatedLong": null,
+                    "parameterValueCalculatedDecimal": 12.31,
+                    "parameterValueCalculatedBool": null,
+                    "measurementUnitCalculatedEnumId": 1,
+                    "parameterValueValidString": "12.31",
+                    "parameterValueValidLong": null,
+                    "parameterValueValidDecimal": 12.31,
+                    "parameterValueValidBool": null,
+                    "measurementUnitValidEnumId": 1,
+                    "parameterValueValidTimestampUtc": null,
+                    "messageTimestamp": "2024-01-01T00:00:00.000000",
+                    "messageTimestampUtc": "2024-01-01T00:00:00.000000"
+                },
+            ]
+        }
+    ],
+    "totalCount": 1,
+    "groupCount": -1,
+    "summary": null
+}
+```

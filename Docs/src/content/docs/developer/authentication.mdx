@@ -1,6 +1,28 @@
 ---
-title: Authentication
+title: API Authentication
 description: How to make authentication
 ---
 
-TODO
+To generate your access token, send a request to 
+```
+POST /connect/token?__tenant=<your-tenant-id>
+```
+with the following body in the **x-www-form-urlencoded** body format:
+```
+grant_type: password
+client_id: api
+client_secret: <ask-provider>
+scope: Enterprise
+username: <your-username>
+password: <your-password>
+__tenant: <your-tenant-id>
+```
+
+If the request is correct, the application will return a JSON with the access token:
+```
+{
+    "access_token": "ey...",
+    "token_type": "Bearer",
+    "expires_in": 3599
+}
+```
