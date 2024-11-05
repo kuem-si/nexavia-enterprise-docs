@@ -139,6 +139,11 @@ GET /api/iot-device-status-dwh-acceptor/get-history-status-dwh-data-list-for-dev
 &toDateStringRepresentation=2024-01-02T12:00:00
 &__tenant=<your-tenant-id>
 ```
+with the following headers:
+```
+Authorization: Bearer <your-auth-token>
+__tenant: <your-tenant-id>
+```
 
 :::caution
 Please be considerate to use timeframes within a 30-day period. Abusing the API could result in a temporary rate-limit from the server!
