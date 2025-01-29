@@ -47,6 +47,14 @@ export default defineConfig({
 							]
 						},
 						{
+							label: 'General UI & UX patterns',
+							items :[
+								{ label: 'Overview', slug: 'user/general-ui-ux-patterns/overview' },
+								{ label: 'Grid - Row Filter', slug: 'user/general-ui-ux-patterns/grid-filter-row' },
+								{ label: 'Grid - Column Sorting', slug: 'user/general-ui-ux-patterns/grid-column-sorting' }
+							]
+						},
+						{
 							label: 'Tenant Management',
 							items: [
 								{ label: 'Overview', slug: 'user/tenant-management' },

@@ -1,0 +1,54 @@
+---
+title: Grid - Row Filter
+---
+
+Most grids in application have row filter in the second row (below column names).<br />
+:::caution
+Not all columns have enabled this filter mainly because of technical reasons of database querying on the backend side.
+:::
+
+How row filter looks like (example):
+
+<img src={uiUxPatternGridRowFilter.src} alt="ui-ux-pattern-grid-row-filter-link" />
+
+Row filter is composed of two parts - **operator** (left part) and **value(s)** (right part).<br /><br />
+The example below shows the row filter **for a column <u>data type of text</u>**.
+
+<img src={uiUxPatternGridRowFilterOperatorChoose.src} alt="ui-ux-pattern-grid-row-filter-operator-choose-link" />
+
+<br />
+
+<hr />
+
+:::tip
+Based on data type of column (**<u>text</u>**, **<u>number</u>**, **<u>date</u>**, **<u>datetime</u>**, **<u>boolean</u>** <u>(true/false - yes/no)</u>), range of available operators and input for values are different.
+:::
+
+Examples of available operators for data types date, datetime and number and value choosers (date, datetime):
+
+| Operators                                                                                                               | Date value picker                                                                                                      | Datetime value picker                                                                                                  |
+| ----------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| <img src={uiUxPatternGridRowFilterOperatorsDatetime.src} alt="ui-ux-pattern-grid-row-filter-operators-datetime-link" /> | <img src={uiUxPatternGridRowFilterValueChooserDate.src} alt="ui-ux-pattern-grid-row-filter-value-chooser-date-link" /> | <img src={uiUxPatternGridRowFilterValueChooserDatetime.src} alt="ui-ux-pattern-grid-row-filter-value-chooser-datetime-link" /> |
+
+Example of selected date and datetime row filter in grid (both with "Less than" operator):
+<img src={uiUxPatternGridRowFilterDateDatetimeValuesChosen.src} alt="ui-ux-pattern-grid-row-filter-date-datetime-values-chosen-link" />
+
+When "Between" operator is chosen (for date, datetime and number data types) - then start and end values should be defined.<br />
+Example for selecting start and end values for date type date and how it looks when chosen:
+
+| Before selection                                                                                                                                  | When selected                                                                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <img src={uiUxPatternGridRowFilterDateDatetimeValuesChoserDateBetween.src} alt="ui-ux-pattern-grid-row-filter-value-chooser-date-between-link" /> | <img src={uiUxPatternGridRowFilterDateDatetimeValuesChoserDateBetweenChosen.src} alt="ui-ux-pattern-grid-row-filter-value-chooser-date-between-chosen-link" /> |
+
+:::tip
+Value chooser for filter numeric column is the same as for text, but input accepts only numeric characters and decimal point.
+:::
+
+import uiUxPatternGridRowFilter from '../../../../assets/pictures/ui-ux-pattern-grid-row-filter.png';
+import uiUxPatternGridRowFilterOperatorChoose from '../../../../assets/pictures/ui-ux-pattern-grid-row-filter-operator-choose.png';
+import uiUxPatternGridRowFilterOperatorsDatetime from '../../../../assets/pictures/ui-ux-pattern-grid-row-filter-operators-datetime.png';
+import uiUxPatternGridRowFilterValueChooserDate from '../../../../assets/pictures/ui-ux-pattern-grid-row-filter-value-chooser-date.png';
+import uiUxPatternGridRowFilterValueChooserDatetime from '../../../../assets/pictures/ui-ux-pattern-grid-row-filter-value-chooser-datetime.png';
+import uiUxPatternGridRowFilterDateDatetimeValuesChosen from '../../../../assets/pictures/ui-ux-pattern-grid-row-filter-date-datetime-values-chosen.png';
+import uiUxPatternGridRowFilterDateDatetimeValuesChoserDateBetween from '../../../../assets/pictures/ui-ux-pattern-grid-row-filter-value-chooser-date-between.png';
+import uiUxPatternGridRowFilterDateDatetimeValuesChoserDateBetweenChosen from '../../../../assets/pictures/ui-ux-pattern-grid-row-filter-value-chooser-date-between-chosen.png';
