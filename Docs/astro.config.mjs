@@ -41,16 +41,22 @@ export default defineConfig({
 							]
 						},
 						{
-							label: 'Dashboard',
+							label: 'General',
 							items :[
-								{ label: 'Main Dashboard', slug: 'user/dashboard/main' },
-								{ label: 'Device Dashboard', slug: 'user/dashboard/device' },
+								{ label: 'Language Management', slug: 'user/language-management' }
 							]
 						},
 						{
 							label: 'Tenant Management',
 							items: [
 								{ label: 'Overview', slug: 'user/tenant-management' },
+							]
+						},
+						{
+							label: 'Dashboard',
+							items :[
+								{ label: 'Main Dashboard', slug: 'user/dashboard/main' },
+								{ label: 'Device Dashboard', slug: 'user/dashboard/device' },
 							]
 						},
 						{
