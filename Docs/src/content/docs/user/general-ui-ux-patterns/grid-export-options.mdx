@@ -1,0 +1,64 @@
+---
+title: Grid - Export Options
+---
+
+## Supported export file types
+The following file types are supported when exporting data from grid:
+- Microsoft Excel (**.xlsx**, <u>but not .xls</u>)
+- CSV (delimiter can be defined)
+- PDF
+
+## Data export Options
+When exporting data to file from grid, the following options are possible:
+- Exporting all data from grid
+- Exporting selected data (rows) only
+
+**The folowing data export options applied to all supported file types.**
+
+:::tip
+When exporting selected rows, it's important to understand how selection works.<br />
+[Row selection in grid documentation](/user/general-ui-ux-patterns/grid-row-selection)
+:::
+
+## File export options in grid
+The file export capabilities for grid are accessible with buttons, which are located at the upper-right corner of the grid.
+
+The following picture below shows these buttons.
+
+<img src={uiUxPatternGridExportButtons.src} alt="ui-ux-pattern-grid-export-buttons-link" />
+
+When click is made on export button (based on desired file type format), the dropdown menu for this particular button opens with the following options to select:
+- Export all data
+- Export selected rows
+
+Example of dropdown menu for PDF export button:
+
+<img src={uiUxPatternGridExportButtonPdfDropdown.src} alt="ui-ux-pattern-grid-export-button-pdf-dropdown-link" />
+
+When desired option is chosen, then exporting process starts.
+
+When processing on the backend side is finished, file saving dialog window appears to save created file on desired storage location.
+
+## General rules and behaviors of data exporting
+
+:::caution
+Exporting large number of rows may take a while or in some cases even fail (excessiove usage of hardware resources on backend side).<br />
+Data export capabilities of the grid are not meant to be the case for large exports.<br />
+<u>Large exports should be done with background workers (or jobs) on backend side or with specialized tools.</u>
+:::
+
+:::tip
+When using export functionality of grid (<u>no matter which export file type</u>), the following rules applied to export file:
+- when exporting "all data" it's important to understand that this means all data (rows) which are returned by backend <u>**WITH ALL APPLIED FILTERING AND SORTING**</u> (row filter,...) in application.
+- columns that are visible in grid (hidden columns inside column chooser are not exported to file)
+- column order inside exported file are the same as in application
+:::
+
+:::caution
+When exporting to CSV file, it's important to define delimiter that cannot be broke by some data in some column.<br />
+<u>**The best delimiter is unique character that cannot appear in any column (data).**</u><br />
+<u>When this rule is not satisfied, the broken CSV file is created.</u>
+:::
+
+import uiUxPatternGridExportButtons from '../../../../assets/pictures/ui-ux-pattern-grid-export-buttons.png';
+import uiUxPatternGridExportButtonPdfDropdown from '../../../../assets/pictures/ui-ux-pattern-grid-export-button-pdf-dropdown.png';

@@ -55,7 +55,8 @@ export default defineConfig({
 								{ label: 'Grid - Column Customizations', slug: 'user/general-ui-ux-patterns/grid-column-customizations' },
 								{ label: 'Grid - Row Selection', slug: 'user/general-ui-ux-patterns/grid-row-selection' },
 								{ label: 'Grid - Pagination', slug: 'user/general-ui-ux-patterns/grid-pagination' },
-								{ label: 'Grid - Master-Detail', slug: 'user/general-ui-ux-patterns/grid-master-detail' }
+								{ label: 'Grid - Master-Detail', slug: 'user/general-ui-ux-patterns/grid-master-detail' },
+								{ label: 'Grid - Export Options', slug: 'user/general-ui-ux-patterns/grid-export-options' }
 							]
 						},
 						{
