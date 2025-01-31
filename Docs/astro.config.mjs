@@ -53,7 +53,8 @@ export default defineConfig({
 								{ label: 'Grid - Row Filter', slug: 'user/general-ui-ux-patterns/grid-filter-row' },
 								{ label: 'Grid - Column Sorting', slug: 'user/general-ui-ux-patterns/grid-column-sorting' },
 								{ label: 'Grid - Column Customizations', slug: 'user/general-ui-ux-patterns/grid-column-customizations' },
-								{ label: 'Grid - Row Selection', slug: 'user/general-ui-ux-patterns/grid-row-selection' }
+								{ label: 'Grid - Row Selection', slug: 'user/general-ui-ux-patterns/grid-row-selection' },
+								{ label: 'Grid - Pagination', slug: 'user/general-ui-ux-patterns/grid-pagination' }
 							]
 						},
 						{
