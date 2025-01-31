@@ -1,0 +1,40 @@
+---
+title: Grid - Row Selection
+---
+
+Some grids may have enabled row selection feature (based on desired functionality of specific part of application).
+The possible srow selection modes are:
+- single
+- multiple
+
+:::tip
+When selection of multiple rows are enabled, **Select all** checkbox <u>may appear</u> as the first column in the grid.<br /><br />
+**IMPORTANT**<br />
+**Select all** feature may also be not available due to technical reasons (possibility of too many selected rows in the grid for further manipulation,...).
+:::
+
+Example of the grid with enabled multiple selection and **Select all** feature:
+<img src={uiUxPatternGridRowSelectionMultipleSelectAll.src} alt="ui-ux-pattern-grid-row-selection-multiple-select-all-link" />
+
+:::caution
+**Select all** feature for selecting rows can be configured in two modes:<br />
+- select all rows <u>inside current grid page</u>
+- select all rows <u>globally (on all pages)</u>
+
+Based on specific functionality of grid inside application, the most appropriate mode is chosen.<br />
+<u>User can always manually check mode of **Select all** feature if go one page forward (or back) inside grid.</u>
+:::
+
+:::tip
+When multiple row selection mode is enabled, standard keyboard keys or combinations for selection and deselecting rows are available.
+
+**Microsoft Windows**
+
+- holding **Shift** key while clicking rows<br />
+All rows between first and last one clicked are automatically selected.
+
+- holding **AltGr** key while clicking rows<br />
+Each individual row which wac clicked is selected. If selected row is clicked again it becomes deselected.
+:::
+
+import uiUxPatternGridRowSelectionMultipleSelectAll from '../../../../assets/pictures/ui-ux-pattern-grid-row-selection-multiple-select-all.png';
