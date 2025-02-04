@@ -57,7 +57,9 @@ export default defineConfig({
 								{ label: 'Grid - Pagination', slug: 'user/general-ui-ux-patterns/grid-pagination' },
 								{ label: 'Grid - Master-Detail', slug: 'user/general-ui-ux-patterns/grid-master-detail' },
 								{ label: 'Grid - Export Options', slug: 'user/general-ui-ux-patterns/grid-export-options' },
-								{ label: 'Chart - Export & Print Options', slug: 'user/general-ui-ux-patterns/chart-export-print-options' }
+								{ label: 'Chart - Export & Print Options', slug: 'user/general-ui-ux-patterns/chart-export-print-options' },
+								{ label: 'Chart - Show & Hide Series', slug: 'user/general-ui-ux-patterns/chart-show-hide-series' },
+								{ label: 'Chart - Zoom & Pan', slug: 'user/general-ui-ux-patterns/chart-zoom-pan' }
 							]
 						},
 						{
