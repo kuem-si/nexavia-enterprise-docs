@@ -59,7 +59,9 @@ export default defineConfig({
 								{ label: 'Grid - Export Options', slug: 'user/general-ui-ux-patterns/grid-export-options' },
 								{ label: 'Chart - Export & Print Options', slug: 'user/general-ui-ux-patterns/chart-export-print-options' },
 								{ label: 'Chart - Show & Hide Series', slug: 'user/general-ui-ux-patterns/chart-show-hide-series' },
-								{ label: 'Chart - Zoom & Pan', slug: 'user/general-ui-ux-patterns/chart-zoom-pan' }
+								{ label: 'Chart - Zoom & Pan', slug: 'user/general-ui-ux-patterns/chart-zoom-pan' },
+								{ label: 'Selectbox - Filtering', slug: 'user/general-ui-ux-patterns/selectbox-filtering' },
+								{ label: 'Datepicker - Selection Advices', slug: 'user/general-ui-ux-patterns/date-selection-advices' }
 							]
 						},
 						{
