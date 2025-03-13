@@ -3,6 +3,60 @@ title: Device List
 description: Device List API
 ---
 
+## Device List With Last Measured Values
+
+To retrieve a list of the devices on the application send a request to:
+```
+GET /api/integrations/get-devices-with-last-measured-values?__tenant=<your-tenant-id>
+&page=0
+&pageSize=1000
+&sortBy=<any-property>
+&getAll=<true/false>
+```
+
+:::tip
+The pageSize is limited to 1000. If you try using a number higher than this, it will default to 1000.
+:::
+
+The application will return the device list in the following format:
+```
+{
+    "totalCount": 22,
+    "count": 1,
+    "items": [
+    {
+        "tenantId": "b34f9fca-8b59-4c5b-9986-d8233922d3d2",
+        "id": 1,
+        "uuid": "a5e2d003-d3c0-4d6a-92e5-5755b63d207c",
+        "serialNumber": "A81758FFFE03A2B7",
+        "uniqueIdentifier": "device-001",
+        "deviceTypeEnumId": 1,
+        "deviceTypeEnumName": "AradOctaveXtrWaterMeterV1",
+        "creationTime": "2025-02-20T13:46:54.6599821+01:00",
+        "lastMessageReceivedTimestampUtc": "2025-02-20T11:55:07.3996115Z",
+        "statusParameterList": [
+            {
+                "deviceTypePayloadTypeParameterTypeCommonEnumId": 0,
+                "deviceTypePayloadTypeParameterTypeCommonEnumName": "Unknown",
+                "friendlyDisplayAlias": "Unknown",
+                "measurementReadingTypeEnumId": 0,
+                "measurementReadingTypeEnumName": "Unknown",
+                "parameterValueValidString": "2",
+                "parameterValueValidLong": 2,
+                "parameterValueValidDecimal": 2,
+                "parameterValueValidBool": false,
+                "measurementUnitValidEnumId": 0,
+                "measurementUnitValidEnumName": "Unknown",
+                "measurementUnitCalculatedEnumIdAbbreviation": "",
+                "parameterValueValidTimestampUtc": "2025-02-12T23:02:31.570621Z",
+                "messageTimestamp": "2025-02-12T23:02:31.570621",
+                "messageTimestampUtc": "2025-02-12T23:02:31.570621Z"
+            },
+        ]
+    }
+}
+```
+
 ## Device List
 
 To retrieve a list of the devices on the application send a request to:
