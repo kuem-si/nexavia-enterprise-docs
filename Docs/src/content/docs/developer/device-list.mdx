@@ -14,6 +14,12 @@ GET /api/integrations/get-devices-with-last-measured-values?__tenant=<your-tenan
 &getAll=<true/false>
 ```
 
+with the following headers:
+```
+Authorization: Bearer <your-auth-token>
+__tenant: <your-tenant-id>
+```
+
 :::tip
 The pageSize is limited to 1000. If you try using a number higher than this, it will default to 1000.
 :::
