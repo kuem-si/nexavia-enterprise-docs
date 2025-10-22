@@ -11,6 +11,7 @@ GET /api/integrations/get-devices-with-last-measured-values?__tenant=<your-tenan
 &page=0
 &pageSize=1000
 &sortBy=<any-property>
+&modifiedAfter=<datetime-UTC>
 &getAll=<true/false>
 ```
 
@@ -39,6 +40,7 @@ The application will return the device list in the following format:
         "deviceTypeEnumId": 1,
         "deviceTypeEnumName": "AradOctaveXtrWaterMeterV1",
         "creationTime": "2025-02-20T13:46:54.6599821+01:00",
+        "lastModificationTime": "2025-02-20T13:46:54.6599821+01:00",
         "lastMessageReceivedTimestampUtc": "2025-02-20T11:55:07.3996115Z",
         "statusParameterList": [
             {
