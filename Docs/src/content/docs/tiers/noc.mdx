@@ -25,39 +25,73 @@ description: Comparison of Monitored, Managed, and Critical NOC service tiers.
 <div class="tier-grid">
 	<div class="tier-card tier-basic">
 		<h2>Monitored</h2>
-		<p>Automated visibility, heartbeat checks, missing-data alarms, email alerts, business-hours support, and a basic monthly availability report.</p>
+		<p><strong>Choose this when:</strong></p>
+		<p>You need automated visibility, basic alerts, business-hours support, and monthly availability reporting.</p>
 	</div>
 	<div class="tier-card tier-advanced">
 		<h2>Managed</h2>
-		<p>Monitored plus 24/7 automated alerting, gateway control, remote diagnostics, dashboard insight, GIS management, and tuned escalation contacts.</p>
+		<p><strong>Choose this when:</strong></p>
+		<p>You need active operational control, deeper diagnostics, alert tuning, GIS management, and engineer response.</p>
 	</div>
 	<div class="tier-card tier-critical">
 		<h2>Critical</h2>
-		<p>Managed plus 24/7 human escalation, remote remediation, incident ownership, defined SLA, root-cause analysis, and quarterly reviews.</p>
+		<p><strong>Choose this when:</strong></p>
+		<p>You need SLA-backed incident ownership, 24/7 human escalation, customer updates, remediation, and service reviews.</p>
 	</div>
 </div>
 
-<div class="tier-matrix">
+## What Each Tier Adds
 
-| Capability | Monitored | Managed | Critical |
-| --- | --- | --- | --- |
-| Included baseline | Up to 5 gateways and 50 sensors included. | Up to 5 gateways and 50 sensors included. | Up to 5 gateways and 50 sensors included. |
-| Gateway monitoring | Automated gateway online and offline monitoring. | 24/7 automated gateway monitoring and alerting. | Managed capabilities plus 24/7 human escalation. |
-| Sensor monitoring | Sensor heartbeat and missing-data alarms. | Battery, RSSI, SNR, packet-loss, and abnormal-traffic monitoring. | Managed capabilities plus incident ownership and customer updates. |
-| Alerts | Email alerts. | Alert tuning and escalation contacts. | Defined SLA and priority escalation path. |
-| Gateway access and remediation | Not included. | Gateway VPN access and control, remote gateway diagnostics, and remote restart. | Remote remediation for incidents. |
-| Operational views | Basic availability visibility through reports. | Network Dashboard Insight plus GIS View and Management. | Capacity and coverage-risk reviews. |
-| Support coverage | Business-hours support. | Business-hours engineer response. | 24/7 human escalation. |
-| Acknowledgement target | Business-hours handling. | Target acknowledgement: four business hours. | Defined SLA, for example 15 to 30 minute acknowledgement. |
-| Reporting | Basic monthly availability report. | Monthly service report. | Root-cause analysis for major incidents and quarterly service review. |
-| Change handling | Standard handling. | Standard handling. | Priority change requests. |
-
+<div class="tier-grid">
+	<div class="tier-card tier-basic">
+		<h3>Monitored</h3>
+		<ul>
+			<li>Automated gateway online/offline monitoring</li>
+			<li>Sensor heartbeat and missing-data alarms</li>
+			<li>Email alerts</li>
+			<li>Business-hours support</li>
+			<li>Basic monthly availability report</li>
+		</ul>
+	</div>
+	<div class="tier-card tier-advanced">
+		<h3>Managed</h3>
+		<p><strong>Everything in Monitored, plus:</strong></p>
+		<ul>
+			<li>24/7 automated monitoring and alerting</li>
+			<li>Gateway VPN access and control</li>
+			<li>Battery, RSSI, SNR, packet-loss, and abnormal-traffic monitoring</li>
+			<li>Remote gateway diagnostics and restart</li>
+			<li>Network Dashboard Insight and GIS View and Management</li>
+			<li>Alert tuning, escalation contacts, and business-hours engineer response</li>
+			<li>Monthly service report and four business hour acknowledgement target</li>
+		</ul>
+	</div>
+	<div class="tier-card tier-critical">
+		<h3>Critical</h3>
+		<p><strong>Everything in Monitored and Managed, plus:</strong></p>
+		<ul>
+			<li>24/7 human escalation</li>
+			<li>Remote remediation</li>
+			<li>Incident ownership and customer updates</li>
+			<li>Defined SLA, for example 15 to 30 minute acknowledgement</li>
+			<li>Root-cause analysis for major incidents</li>
+			<li>Capacity and coverage-risk reviews</li>
+			<li>Priority change requests and quarterly service review</li>
+		</ul>
+	</div>
 </div>
 
-## Tier Summary
+## Capability Matrix
 
-**Monitored** is intended for automated visibility and basic alerting. It covers gateway online or offline status, sensor heartbeat checks, missing-data alarms, email alerts, business-hours support, and a basic monthly availability report.
+<div class="tier-matrix">
 
-**Managed** adds active operational control and deeper network diagnostics. It includes everything in Monitored, plus 24/7 automated monitoring and alerting, gateway VPN access and control, remote diagnostics and restart, dashboard insight, GIS view and management, tuned alerting, escalation contacts, business-hours engineer response, monthly service reporting, and a four business hour acknowledgement target.
+| Capability group | Monitored | Managed | Critical |
+| --- | --- | --- | --- |
+| Monitoring | Automated gateway online/offline monitoring and sensor heartbeat/missing-data alarms. | 24/7 automated monitoring plus battery, RSSI, SNR, packet-loss, and abnormal-traffic monitoring. | Managed monitoring plus 24/7 human escalation. |
+| Alerts and escalation | Email alerts. | Alert tuning and escalation contacts. | Defined SLA and human escalation path. |
+| Access and remediation | Not included. | Gateway VPN access and control, remote diagnostics, and restart. | Remote remediation and incident ownership. |
+| Operational views | Basic availability visibility through reports. | Network Dashboard Insight plus GIS View and Management. | Capacity and coverage-risk reviews. |
+| Response | Business-hours support. | Business-hours engineer response and four business hour acknowledgement target. | SLA acknowledgement, for example 15 to 30 minutes. |
+| Reporting and governance | Basic monthly availability report. | Monthly service report. | Customer updates, root-cause analysis, priority change requests, and quarterly service review. |
 
-**Critical** is intended for environments where incidents require direct ownership and faster escalation. It includes everything in Managed, plus 24/7 human escalation, remote remediation, incident ownership, customer updates, a defined SLA such as 15 to 30 minute acknowledgement, root-cause analysis for major incidents, capacity and coverage-risk reviews, priority change requests, and quarterly service review.
+</div>
