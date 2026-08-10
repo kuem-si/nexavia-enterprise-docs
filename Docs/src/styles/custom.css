@@ -1,0 +1,124 @@
+.tier-hero {
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 8px;
+	padding: 1.25rem;
+	margin: 1rem 0 1.5rem;
+	background:
+		linear-gradient(135deg, rgba(46, 125, 97, 0.14), transparent 45%),
+		linear-gradient(315deg, rgba(37, 99, 235, 0.12), transparent 52%),
+		var(--sl-color-bg-nav);
+}
+
+.tier-hero p {
+	margin: 0;
+	font-size: 1.05rem;
+}
+
+.tier-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+	gap: 1rem;
+	margin: 1.5rem 0;
+}
+
+.tier-card {
+	border: 1px solid var(--sl-color-gray-5);
+	border-top: 4px solid var(--tier-accent, var(--sl-color-accent));
+	border-radius: 8px;
+	padding: 1rem;
+	background: var(--sl-color-bg-nav);
+}
+
+.tier-card h2,
+.tier-card h3 {
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+}
+
+.tier-card p {
+	margin-bottom: 0;
+}
+
+.tier-card ul {
+	margin-bottom: 0;
+	padding-left: 1.1rem;
+}
+
+.tier-basic {
+	--tier-accent: #2f855a;
+}
+
+.tier-advanced {
+	--tier-accent: #2563eb;
+}
+
+.tier-pro {
+	--tier-accent: #7c3aed;
+}
+
+.tier-critical {
+	--tier-accent: #dc2626;
+}
+
+.tier-scope {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+	gap: 0.75rem;
+	margin: 1rem 0 1.5rem;
+}
+
+.tier-stat {
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 8px;
+	padding: 0.85rem;
+	background: var(--sl-color-bg-sidebar);
+}
+
+.tier-stat strong {
+	display: block;
+	font-size: 1.4rem;
+	line-height: 1.2;
+	color: var(--sl-color-white);
+}
+
+.tier-stat span {
+	display: block;
+	color: var(--sl-color-gray-2);
+	font-size: 0.9rem;
+	margin-top: 0.15rem;
+}
+
+.tier-pill-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin: 1rem 0 1.5rem;
+}
+
+.tier-pill {
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 999px;
+	padding: 0.25rem 0.65rem;
+	background: var(--sl-color-bg-nav);
+	font-size: 0.9rem;
+}
+
+.tier-highlight {
+	border-left: 4px solid var(--sl-color-accent);
+	border-radius: 8px;
+	padding: 1rem;
+	margin: 1rem 0 1.5rem;
+	background: var(--sl-color-bg-nav);
+}
+
+.tier-highlight p:last-child {
+	margin-bottom: 0;
+}
+
+.tier-matrix table {
+	font-size: 0.92rem;
+}
+
+.tier-matrix th:not(:first-child) {
+	text-align: center;
+}

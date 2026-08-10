@@ -89,6 +89,16 @@ export default defineConfig({
 					]
 				},
 				{
+					label: 'Tiers',
+					items: [
+						{ label: 'Overview', slug: 'tiers/overview' },
+						{ label: 'NOC', slug: 'tiers/noc' },
+						{ label: 'IoT', slug: 'tiers/iot' },
+						{ label: 'Lighting', slug: 'tiers/lighting' },
+						{ label: 'Package', slug: 'tiers/package' }
+					]
+				},
+				{
 					label: 'Developer',
 					items: [
 						{ label: 'Overview', slug: 'developer/overview' },
