@@ -99,6 +99,13 @@ export default defineConfig({
 					]
 				},
 				{
+					label: 'Utility',
+					items: [
+						{ label: 'Mobile', slug: 'utility/mobile' },
+						{ label: 'Web', slug: 'utility/web' }
+					]
+				},
+				{
 					label: 'Developer',
 					items: [
 						{ label: 'Overview', slug: 'developer/overview' },

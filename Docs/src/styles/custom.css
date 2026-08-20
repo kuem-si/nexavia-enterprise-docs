@@ -122,3 +122,48 @@
 .tier-matrix th:not(:first-child) {
 	text-align: center;
 }
+
+.utility-gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+	gap: 1rem;
+	margin: 1.5rem 0;
+}
+
+.utility-card {
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 8px;
+	overflow: hidden;
+	background: var(--sl-color-bg-nav);
+}
+
+.utility-card img {
+	display: block;
+	width: 100%;
+	aspect-ratio: 16 / 10;
+	object-fit: contain;
+	background: var(--sl-color-bg-sidebar);
+	border-bottom: 1px solid var(--sl-color-gray-5);
+}
+
+.utility-card figcaption {
+	padding: 0.85rem;
+}
+
+.utility-card h2,
+.utility-card h3 {
+	margin: 0 0 0.35rem;
+	font-size: 1rem;
+	line-height: 1.3;
+}
+
+.utility-card p {
+	margin: 0;
+	font-size: 0.92rem;
+	color: var(--sl-color-gray-2);
+}
+
+.utility-card.utility-mobile img {
+	aspect-ratio: 9 / 16;
+	max-height: 34rem;
+}
