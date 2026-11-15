@@ -4,6 +4,8 @@ Technology: https://astro.build/
 
 Base theme: https://starlight.astro.build/
 
+Current versions: Starlight 0.43.1 on Astro 7.4 (Node.js 22 or later). The unmodified template for this version is in `_ThemeUpgrade/Current/starlight`.
+
 ## Prerequisites
 - Node.js: https://nodejs.org/
 
