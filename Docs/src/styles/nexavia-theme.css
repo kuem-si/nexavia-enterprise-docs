@@ -1,0 +1,75 @@
+/*
+ * Nexavia Enterprise identity on Starlight.
+ * Values come only from vendor/nexavia.tokens.css, an unchanged copy of
+ * nexavia-brand-assets v1.6.0 tokens/nexavia.tokens.css (MANIFEST.sha256).
+ * Light and dark follow Starlight's theme switch (mirrored to data-nx-theme in
+ * astro.config.mjs); high contrast follows the system (prefers-contrast: more),
+ * as the tokens define it. Do not put colour values here: update the copy from
+ * a newer Nexavia release instead.
+ */
+:root,
+:root[data-theme='light'],
+:root[data-theme='dark'] {
+	--sl-font: var(--nx-font-family-ui);
+
+	--sl-color-white: var(--nx-color-text-primary);
+	--sl-color-gray-1: var(--nx-color-text-primary);
+	--sl-color-gray-2: var(--nx-color-text-secondary);
+	--sl-color-gray-3: var(--nx-color-text-muted);
+	--sl-color-gray-4: var(--nx-color-border-strong);
+	--sl-color-gray-5: var(--nx-color-border-subtle);
+	--sl-color-gray-6: var(--nx-color-surface-raised);
+	--sl-color-gray-7: var(--nx-color-surface-sunken);
+	--sl-color-black: var(--nx-color-surface-canvas);
+
+	/* Accent: member accent for text, links and the current page; on-accent on top of it. */
+	--sl-color-accent-high: var(--nx-member-accent);
+	--sl-color-accent: var(--nx-member-accent);
+	--sl-color-accent-low: var(--nx-member-on-accent);
+	--sl-color-text-accent: var(--nx-member-accent);
+	--sl-color-text-invert: var(--nx-member-on-accent);
+	--sl-color-bg-accent: var(--nx-member-accent);
+
+	--sl-color-bg-nav: var(--nx-color-surface-raised);
+	--sl-color-bg-sidebar: var(--nx-color-surface-raised);
+	--sl-color-bg-inline-code: var(--nx-color-surface-sunken);
+	--sl-color-hairline-light: var(--nx-color-border-subtle);
+	--sl-color-hairline: var(--nx-color-border-subtle);
+	--sl-color-hairline-shade: var(--nx-color-border-subtle);
+
+	/* Asides use Nexavia's protected status roles: note = info, tip = accent,
+	   caution = warning, danger = critical. Each aside also has its own icon and title. */
+	--sl-color-blue-low: var(--nx-color-surface-sunken);
+	--sl-color-blue: var(--nx-color-status-info);
+	--sl-color-blue-high: var(--nx-color-status-info);
+	--sl-color-purple-low: var(--nx-color-surface-sunken);
+	--sl-color-purple: var(--nx-member-accent);
+	--sl-color-purple-high: var(--nx-member-accent);
+	--sl-color-orange-low: var(--nx-color-surface-sunken);
+	--sl-color-orange: var(--nx-color-status-warning);
+	--sl-color-orange-high: var(--nx-color-status-warning);
+	--sl-color-red-low: var(--nx-color-surface-sunken);
+	--sl-color-red: var(--nx-color-status-critical);
+	--sl-color-red-high: var(--nx-color-status-critical);
+	--sl-color-green-low: var(--nx-color-surface-sunken);
+	--sl-color-green: var(--nx-color-status-success);
+	--sl-color-green-high: var(--nx-color-status-success);
+}
+
+/* Keyboard focus: the member focus colour at the token stroke width. */
+:focus-visible {
+	outline: var(--nx-stroke-focus) solid var(--nx-member-focus);
+	outline-offset: 2px;
+}
+
+/* Links in running text stay underlined, so colour is not the only cue. */
+.sl-markdown-content a:not(:where(.not-content *)) {
+	text-decoration: underline;
+	text-underline-offset: 0.15em;
+}
+
+/* The lockup is wide (about 5.6:1); keep it legible in the header. */
+.site-title img {
+	height: 1.75rem;
+	width: auto;
+}

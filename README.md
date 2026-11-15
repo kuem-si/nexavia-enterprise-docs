@@ -45,3 +45,10 @@ Base theme: https://starlight.astro.build/
   - compare ``package.json`` (inside ``/Docs`` folder) with new one. **Change also ``name`` attribute with new one.**
   - run ``npm install`` (inside ``/Docs`` folder)
   - run ``npm run dev`` (inside ``/Docs`` folder) and check if everything is ok
+-----
+
+## Branding (Nexavia Enterprise identity)
+- The site uses the Nexavia Enterprise identity from the public `kuem-si/nexavia-brand-assets` release (currently `v1.6.0`): the Enterprise lockup (`Docs/src/assets/brand/`), favicons (`Docs/public/`), the tokens (`Docs/src/styles/vendor/nexavia.tokens.css`) and Schibsted Grotesk (`@fontsource/schibsted-grotesk`, OFL).
+- These files are unchanged copies. To update them, copy the new files from a newer brand-assets tag; never edit them here.
+- `Docs/src/styles/nexavia-theme.css` maps Starlight's colour variables to the Nexavia tokens. It holds no colour values of its own. Light and dark follow Starlight's theme switch; high contrast follows the system setting.
+- Tier cards use Nexavia's categorical data colours, never status colours.
