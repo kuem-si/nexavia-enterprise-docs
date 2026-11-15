@@ -52,3 +52,11 @@ Base theme: https://starlight.astro.build/
 - These files are unchanged copies. To update them, copy the new files from a newer brand-assets tag; never edit them here.
 - `Docs/src/styles/nexavia-theme.css` maps Starlight's colour variables to the Nexavia tokens. It holds no colour values of its own. Light and dark follow Starlight's theme switch; high contrast follows the system setting.
 - Tier cards use Nexavia's categorical data colours, never status colours.
+
+## Conformance evidence
+The site uses the Nexavia Enterprise identity from `nexavia-brand-assets` (tokens, lockup, favicon). Kuem governance checks it against the shared accessibility contracts with rendered evidence this repository generates:
+
+- Inside ``/Docs``: ``npm run build`` and then ``npm run conformance``. This renders every page in light, dark, light high contrast and dark high contrast at 1440 and 390 px and writes ``conformance/evidence.json`` (repository root) for the current commit. Commit your changes first; the evidence names the commit it was measured on.
+- Pull requests run the same measurement as a check (``.github/workflows/verify.yml``, ``npm run conformance -- --check``), which writes nothing.
+- Never edit ``conformance/evidence.json`` by hand; regenerate it in the pull request that changes the site.
+
