@@ -1,0 +1,32 @@
+name: Verify
+
+# Pull request gate for the documentation site: build, then render every page in
+# light, dark, light high contrast and dark high contrast and fail on any
+# contrast, focus, non-colour status or target-size failure (Kuem governance,
+# policies/conformance-evidence.md). This repository is public, so the job runs
+# on a GitHub-hosted runner and never on the self-hosted runner (governance
+# policies/ci-policy.md).
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: Docs
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - name: Rendered conformance
+        run: npm run conformance -- --check
