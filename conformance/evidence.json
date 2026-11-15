@@ -10,7 +10,7 @@
   },
   "source": {
     "algorithm": "git-tree-sha256-v1",
-    "digest": "b8a7c96f3a0b3e4b4042ba6fbdc5f1a9ebe05d14621ac9c0fec3da5e2125732e",
+    "digest": "246402f3816fd88d976877c91c8d2683d0a2b303e5f15ba7f8c0158bc3ff626f",
     "exclude": [
       "conformance"
     ]
@@ -30,13 +30,13 @@
     "rendered-contrast": {
       "result": "pass",
       "method": "axe-core color-contrast (WCAG 2.2 AA) on every page at every viewport in every appearance",
-      "tested": 16771,
+      "tested": 16769,
       "failures": []
     },
     "rendered-focus-visible": {
       "result": "pass",
       "method": "keyboard walk (Tab) through every focus stop; each stop shows an outline or box-shadow of at least 2 CSS px, on the element or its focus-within container",
-      "tested": 10128,
+      "tested": 11136,
       "failures": []
     },
     "rendered-status-not-colour-alone": {
@@ -48,7 +48,7 @@
     "rendered-target-size": {
       "result": "pass",
       "method": "axe-core target-size (WCAG 2.5.8) at every viewport; a target reported as obscured is measured again after scrolling it into view",
-      "tested": 9920,
+      "tested": 10216,
       "failures": [],
       "exceptions": []
     }
