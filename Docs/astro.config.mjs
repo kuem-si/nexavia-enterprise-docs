@@ -6,9 +6,37 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'Docs for Nexavia and Thynkr',
+			title: 'Nexavia Enterprise Docs',
+			// Nexavia Enterprise lockup from nexavia-brand-assets v1.6.0 (unchanged copies).
+			logo: {
+				light: './src/assets/brand/nexavia-enterprise-lockup-light.svg',
+				dark: './src/assets/brand/nexavia-enterprise-lockup-dark.svg',
+				replacesTitle: true,
+			},
+			favicon: '/favicon.svg',
+			head: [
+				{ tag: 'link', attrs: { rel: 'icon', href: '/favicon.ico', sizes: '16x16 32x32 48x48' } },
+				{ tag: 'link', attrs: { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' } },
+				// Nexavia tokens read data-nx-member and data-nx-theme; Starlight writes
+				// data-theme. Mirror it before first paint and on every theme change.
+				{
+					tag: 'script',
+					content:
+						"(()=>{const r=document.documentElement;r.dataset.nxMember='enterprise';const s=()=>{r.dataset.nxTheme=r.dataset.theme==='dark'?'dark':'light'};s();new MutationObserver(s).observe(r,{attributes:true,attributeFilter:['data-theme']})})();",
+				},
+				// Code blocks and tables that scroll sideways must be reachable by keyboard (WCAG 2.1.1).
+				{
+					tag: 'script',
+					content:
+						"addEventListener('DOMContentLoaded',()=>{for(const p of document.querySelectorAll('.expressive-code pre, .sl-markdown-content table'))if(p.scrollWidth>p.clientWidth){p.tabIndex=0}});",
+				},
+			],
 			customCss: [
-				// Relative path to your custom CSS file
+				'@fontsource/schibsted-grotesk/400.css',
+				'@fontsource/schibsted-grotesk/600.css',
+				'@fontsource/schibsted-grotesk/700.css',
+				'./src/styles/vendor/nexavia.tokens.css',
+				'./src/styles/nexavia-theme.css',
 				'./src/styles/custom.css',
 			],
 			social: {

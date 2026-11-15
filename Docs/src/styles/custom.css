@@ -1,12 +1,13 @@
+/* Tier accents use Nexavia's categorical data colours, never status colours:
+   a tier name such as "Critical" is a product level, not an alarm. The tier
+   name is always written in the card heading. */
 .tier-hero {
 	border: 1px solid var(--sl-color-gray-5);
 	border-radius: 8px;
 	padding: 1.25rem;
 	margin: 1rem 0 1.5rem;
-	background:
-		linear-gradient(135deg, rgba(46, 125, 97, 0.14), transparent 45%),
-		linear-gradient(315deg, rgba(37, 99, 235, 0.12), transparent 52%),
-		var(--sl-color-bg-nav);
+	border-left: 4px solid var(--sl-color-accent);
+	background: var(--sl-color-bg-nav);
 }
 
 .tier-hero p {
@@ -45,19 +46,19 @@
 }
 
 .tier-basic {
-	--tier-accent: #2f855a;
+	--tier-accent: var(--nx-color-data-cat-1);
 }
 
 .tier-advanced {
-	--tier-accent: #2563eb;
+	--tier-accent: var(--nx-color-data-cat-2);
 }
 
 .tier-pro {
-	--tier-accent: #7c3aed;
+	--tier-accent: var(--nx-color-data-cat-4);
 }
 
 .tier-critical {
-	--tier-accent: #dc2626;
+	--tier-accent: var(--nx-color-data-cat-6);
 }
 
 .tier-scope {
@@ -166,4 +167,12 @@
 .utility-card.utility-mobile img {
 	aspect-ratio: 9 / 16;
 	max-height: 34rem;
+}
+
+/* Starlight spaces consecutive content blocks; inside a grid that pushed every
+   card after the first one down. Grid items line up at the top. */
+.tier-grid > *,
+.tier-scope > *,
+.utility-gallery > * {
+	margin-top: 0;
 }
