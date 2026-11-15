@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "application": "nexavia-enterprise-docs",
+  "generator": {
+    "script": "cd Docs && npm run build && npm run conformance (Docs/scripts/conformance/evidence.mjs)",
+    "tools": {
+      "axe-core": "4.10.3",
+      "playwright": "1.63.0"
+    }
+  },
+  "source": {
+    "algorithm": "git-tree-sha256-v1",
+    "digest": "b8a7c96f3a0b3e4b4042ba6fbdc5f1a9ebe05d14621ac9c0fec3da5e2125732e",
+    "exclude": [
+      "conformance"
+    ]
+  },
+  "appearances": [
+    "light",
+    "dark",
+    "light-hc",
+    "dark-hc"
+  ],
+  "viewports": [
+    1440,
+    390
+  ],
+  "pages": 35,
+  "checks": {
+    "rendered-contrast": {
+      "result": "pass",
+      "method": "axe-core color-contrast (WCAG 2.2 AA) on every page at every viewport in every appearance",
+      "tested": 16771,
+      "failures": []
+    },
+    "rendered-focus-visible": {
+      "result": "pass",
+      "method": "keyboard walk (Tab) through every focus stop; each stop shows an outline or box-shadow of at least 2 CSS px, on the element or its focus-within container",
+      "tested": 10128,
+      "failures": []
+    },
+    "rendered-status-not-colour-alone": {
+      "result": "pass",
+      "method": "every visible status element (.starlight-aside, .sl-badge) carries text or an accessible name; axe-core link-in-text-block",
+      "tested": 296,
+      "failures": []
+    },
+    "rendered-target-size": {
+      "result": "pass",
+      "method": "axe-core target-size (WCAG 2.5.8) at every viewport; a target reported as obscured is measured again after scrolling it into view",
+      "tested": 9920,
+      "failures": [],
+      "exceptions": []
+    }
+  }
+}
