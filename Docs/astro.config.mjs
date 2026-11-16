@@ -39,9 +39,7 @@ export default defineConfig({
 				'./src/styles/nexavia-theme.css',
 				'./src/styles/custom.css',
 			],
-			social: {
-				github: 'https://github.com/kuem-si',
-			},
+			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/kuem-si' }],
 			sidebar: [
 				/*{
 					label: 'Guides',
@@ -52,7 +50,7 @@ export default defineConfig({
 				},
 				{
 					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					items: [{ autogenerate: { directory: 'reference' } }],
 				},*/
 				{
 					label: 'Overview',
